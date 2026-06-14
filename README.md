@@ -27,7 +27,7 @@ Alaa/
 2. أنشئ مستودع (Repository) جديد باسم: `Alaa`
 3. ارفع كل الملفات داخله.
 4. من **Settings → Pages** اختر الفرع `main` والمجلد `/ (root)` ثم Save.
-5. رابط موقعك: `https://USERNAME.github.io/Alaa`
+5. رابط موقعك الحالي: `https://cryzerind.github.io/alaa/`
 
 ### الطريقة 3 — Vercel
 1. ادخل https://vercel.com وسجّل بحساب GitHub.
