@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>السيرة الذاتية - نسخة بلدي - علاء عبد الكريم</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  :root{
+    --balady:#006b5f;
+    --balady-2:#008a78;
+    --mint:#00a98f;
+    --mint-soft:#e7f7f3;
+    --sand:#f7f3ea;
+    --ink:#173f3a;
+    --text:#263b39;
+    --muted:#647a77;
+    --line:#dfe9e6;
+    --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  @page{size:A4;margin:0}
+  html,body{font-family:'Tajawal','Segoe UI',Tahoma,sans-serif;color:var(--text);background:#edf3f1}
+  .en,.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+  .page{
+    width:210mm;min-height:297mm;margin:0 auto;background:var(--white);
+    overflow:hidden;position:relative;
+  }
+  .page::before{
+    content:"";position:absolute;inset:0 0 auto;height:45mm;
+    background:
+      radial-gradient(circle at 14% 16%,rgba(255,255,255,.26),transparent 16mm),
+      linear-gradient(135deg,#00584f 0%,#007f71 55%,#00a98f 100%);
+    z-index:0;
+  }
+  .page::after{
+    content:"";position:absolute;top:12mm;left:-22mm;width:76mm;height:76mm;border:1mm solid rgba(255,255,255,.12);
+    border-radius:50%;z-index:0;
+  }
+  .inner{position:relative;z-index:1;padding:7mm 8mm 6mm}
+
+  .topbar{display:flex;justify-content:space-between;align-items:flex-start;color:#fff;margin-bottom:4mm}
+  .brand{display:flex;align-items:center;gap:2.4mm}
+  .brand-mark{
+    width:10.5mm;height:10.5mm;border-radius:3mm;background:#fff;color:var(--balady);
+    display:grid;place-items:center;font-size:3.6mm;font-weight:900;box-shadow:0 8px 18px rgba(0,0,0,.14);
+  }
+  .brand-text strong{display:block;font-size:4mm;font-weight:900;line-height:1.1}
+  .brand-text span{display:block;font-size:2.35mm;color:rgba(255,255,255,.82);margin-top:.5mm}
+  .version-badge{
+    display:inline-flex;align-items:center;gap:1.2mm;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:1.5mm 3mm;
+    font-size:2.55mm;font-weight:800;
+  }
+
+  .hero-card{
+    background:#fff;border-radius:4mm;border:1px solid rgba(0,107,95,.16);
+    box-shadow:0 12px 30px rgba(0,74,67,.15);padding:4mm 5mm;margin-bottom:4mm;
+    display:block;
+  }
+  .name{font-size:7.8mm;font-weight:900;color:var(--ink);line-height:1.05;margin-bottom:.8mm}
+  .role{font-size:3.8mm;font-weight:800;color:var(--balady)}
+  .summary{font-size:2.82mm;line-height:1.42;color:var(--muted);margin-top:2mm;text-align:justify}
+  .summary b{color:var(--ink)}
+  .status-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm}
+  .status{
+    background:var(--mint-soft);border:1px solid #c9eee6;border-radius:2.4mm;padding:1.7mm;
+  }
+  .status span{display:block;font-size:2.2mm;color:var(--muted);margin-bottom:.5mm}
+  .status strong{display:block;font-size:2.72mm;color:var(--ink);font-weight:900;line-height:1.25}
+
+  .grid{display:grid;grid-template-columns:1fr 64mm;gap:3.5mm}
+  .main,.side{display:flex;flex-direction:column;gap:3mm}
+  .panel{
+    border:1px solid var(--line);border-radius:3mm;background:#fff;overflow:hidden;
+    box-shadow:0 6px 16px rgba(0,74,67,.055);
+  }
+  .panel-head{
+    display:flex;align-items:center;justify-content:space-between;gap:2mm;
+    padding:2.2mm 3mm;background:linear-gradient(90deg,#f7fbfa,#fff);border-bottom:1px solid var(--line);
+  }
+  .panel-title{display:flex;align-items:center;gap:1.6mm;font-size:3.45mm;font-weight:900;color:var(--ink)}
+  .panel-title i{
+    width:5.8mm;height:5.8mm;border-radius:1.6mm;background:var(--mint-soft);color:var(--balady);
+    display:grid;place-items:center;font-size:2.6mm;
+  }
+  .version-badge i::before,.panel-title i::before,.contact-list i::before{
+    content:"";display:block;width:2mm;height:2mm;border-radius:.6mm;background:currentColor;
+  }
+  .panel-chip{
+    display:inline-flex;align-items:center;gap:.8mm;border-radius:999px;background:var(--mint-soft);
+    color:var(--balady);font-size:2.2mm;font-weight:800;padding:.9mm 1.8mm;
+  }
+  .panel-body{padding:2.5mm 3mm}
+
+  .service-list{display:grid;grid-template-columns:1fr 1fr;gap:1.25mm 2mm;list-style:none}
+  .service-list li{
+    display:flex;align-items:flex-start;gap:1.5mm;font-size:2.62mm;line-height:1.28;color:var(--text);
+  }
+  .service-list li::before{
+    content:"";width:1.55mm;height:1.55mm;border-radius:50%;background:var(--mint);margin-top:1.05mm;flex-shrink:0;
+  }
+  .experience{
+    border-right:1mm solid var(--mint);padding-right:2.4mm;
+  }
+  .experience h3{font-size:3.25mm;color:var(--ink);font-weight:900}
+  .experience .role-line{font-size:2.8mm;color:var(--balady);font-weight:800;margin:.3mm 0 .7mm}
+  .experience p{font-size:2.65mm;color:var(--muted);line-height:1.35}
+  .project{
+    background:linear-gradient(135deg,var(--mint-soft),#fff);border:1px solid #c9eee6;
+    border-radius:2.5mm;padding:2.3mm;
+  }
+  .project h3{font-size:3.2mm;color:var(--ink);font-weight:900;margin-bottom:.7mm}
+  .project p{font-size:2.62mm;color:var(--muted);line-height:1.34}
+
+  .contact-list{list-style:none;display:grid;gap:1.6mm}
+  .contact-list li{display:flex;align-items:center;gap:1.8mm;font-size:2.7mm;color:var(--text)}
+  .contact-list i{
+    width:5.8mm;height:5.8mm;border-radius:1.6mm;background:var(--mint-soft);color:var(--balady);
+    display:grid;place-items:center;flex-shrink:0;
+  }
+  .tag-list{display:flex;flex-wrap:wrap;gap:1.3mm}
+  .tag{
+    border:1px solid var(--line);background:#fbfdfc;border-radius:999px;
+    padding:1.1mm 1.8mm;font-size:2.48mm;font-weight:700;color:var(--text);
+  }
+  .course-list,.personal-list{list-style:none;display:grid;gap:1.35mm}
+  .course-list li,.personal-list li{display:flex;gap:1.5mm;font-size:2.58mm;line-height:1.28}
+  .course-list li::before,.personal-list li::before{
+    content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;color:var(--mint);font-size:2mm;margin-top:.2mm;
+  }
+  .lang{margin-bottom:1.8mm}
+  .lang-top{display:flex;justify-content:space-between;font-size:2.55mm;font-weight:800;color:var(--ink);margin-bottom:.8mm}
+  .bar{height:1.3mm;background:#e8f1ef;border-radius:4mm;overflow:hidden}
+  .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--balady),var(--mint));border-radius:4mm}
+  .qr-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm;margin-top:2.2mm}
+  .qr{
+    border:1px solid var(--line);background:#fbfdfc;border-radius:2.4mm;text-align:center;padding:1.4mm;
+  }
+  .qr img{width:17mm;height:17mm;margin:0 auto .7mm;border-radius:1mm}
+  .qr strong{display:block;font-size:2.45mm;color:var(--ink)}
+  .qr span{display:block;font-size:2.05mm;color:var(--muted);line-height:1.15}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="inner">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">ع.ك</div>
+        <div class="brand-text">
+          <strong>السيرة الذاتية</strong>
+        </div>
+      </div>
+      <div class="version-badge"><i class="fa-solid fa-building-columns"></i> مقدم خدمة هندسية</div>
+    </header>
+
+    <section class="hero-card">
+      <div>
+        <h1 class="name">علاء عبد الكريم</h1>
+        <div class="role">رسام معماري ومدخل بيانات على منصة بلدي</div>
+        <p class="summary">
+          رسام معماري ومدخل بيانات على منصة بلدي، أمتلك خبرة تدريبية مميزة ومعرفة جيدة بشروط
+          <b>كود البناء السعودي</b> واشتراطات وأنظمة <b>أمانة جدة</b> ومنصة <b>بلدي</b>.
+          أعمل على إعداد المناظير وفق الهوية المعمارية السعودية الساحلية بجدة، وتنفيذ الاستديو
+          التصميمي الكامل بما يشمل العرض المعماري وتنظيم مخرجات العمل.
+        </p>
+      </div>
+    </section>
+
+    <div class="grid">
+      <main class="main">
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-list-check"></i> ما أقدمه</div>
+            <span class="panel-chip">قائمة خدمات</span>
+          </div>
+          <div class="panel-body">
+            <ul class="service-list">
+              <li>مدخل بيانات على منصة بلدي</li>
+              <li>مناظير وفق الهوية الساحلية السعودية</li>
+              <li>تصميم معماري</li>
+              <li>رفع معماري من الطبيعة</li>
+              <li>تقفيل المعاملات</li>
+              <li>رخص بناء إصدار جديد</li>
+              <li>رخص بناء إضافة وتعديل</li>
+              <li>رخص بناء تعديل بيانات إدارية</li>
+              <li>رخص ترميم</li>
+              <li>رخص هدم</li>
+              <li>تصحيح وضع مبنى قائم</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-briefcase"></i> الخبرة المهنية</div>
+            <span class="panel-chip">منشأة هندسية</span>
+          </div>
+          <div class="panel-body">
+            <div class="experience">
+              <h3>شركة سيجما ارك للاستشارات الهندسية</h3>
+              <div class="role-line">رسام معماري ومدخل بيانات على منصة بلدي</div>
+              <p>
+                خبرة عملية في إعداد الرسومات المعمارية، إدخال البيانات، تقفيل المعاملات،
+                والتعامل مع متطلبات أنظمة أمانة جدة ومنصة بلدي ضمن بيئة مكتب هندسي.
+                كما عملت على إعداد المناظير وتنفيذ الاستديو التصميمي الكامل.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-code"></i> مشروع تقني</div>
+            <span class="panel-chip">حل عملي</span>
+          </div>
+          <div class="panel-body">
+            <div class="project">
+              <h3>برنامج تسريع إنشاء التعهدات</h3>
+              <p>
+                صممت باستخدام <span class="en">Visual Studio</span> أداة تختصر تجهيز التعهدات داخل المكتب الهندسي.
+                أمتلك معرفة بـ 7 لغات برمجة، مما يدعم احترافي في مجال <span class="en">IT</span>
+                وتحويل الأفكار إلى أدوات عملية.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-star"></i> نقاط تميز</div>
+            <span class="panel-chip">اعتماد عملي</span>
+          </div>
+          <div class="panel-body">
+            <div class="tag-list">
+              <span class="tag">معرفة بكود البناء السعودي</span>
+              <span class="tag">اشتراطات أمانة جدة</span>
+              <span class="tag">منصة بلدي</span>
+              <span class="tag">استديو تصميمي كامل</span>
+              <span class="tag">حلول تقنية لتسريع العمل</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="side">
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-address-card"></i> التواصل</div>
+          </div>
+          <div class="panel-body">
+            <ul class="contact-list">
+              <li><i class="fa-solid fa-phone"></i><span class="ltr">0565625048</span></li>
+              <li><i class="fa-brands fa-whatsapp"></i><span class="ltr">+966 565625048</span></li>
+              <li><i class="fa-solid fa-envelope"></i><span class="ltr">alaacryzer@gmail.com</span></li>
+            </ul>
+            <div class="qr-grid">
+              <div class="qr">
+                <img src="assets/whatsapp-qr.png" alt="باركود واتساب" />
+                <strong>واتساب</strong>
+                <span>تواصل مباشر</span>
+              </div>
+              <div class="qr">
+                <img src="assets/cv-site-qr.png" alt="باركود الموقع" />
+                <strong>الموقع</strong>
+                <span>نسخة الويب</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-sliders"></i> المهارات التقنية</div>
+          </div>
+          <div class="panel-body">
+            <div class="tag-list">
+              <span class="tag">برنامج الرسم <span class="en">AutoCAD</span></span>
+              <span class="tag"><span class="en">SketchUp</span></span>
+              <span class="tag"><span class="en">PowerPoint</span></span>
+              <span class="tag">منصة بلدي</span>
+              <span class="tag">نظام الرخص بأمانة جدة</span>
+              <span class="tag"><span class="en">Visual Studio</span></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-certificate"></i> الدورات</div>
+          </div>
+          <div class="panel-body">
+            <ul class="course-list">
+              <li>دبلومة الرسم المعماري باستخدام <span class="en">AutoCAD</span></li>
+              <li>دبلومة الرفع المعماري من الطبيعة</li>
+              <li>دبلومة المناظير باستخدام <span class="en">SketchUp</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-language"></i> اللغات</div>
+          </div>
+          <div class="panel-body">
+            <div class="lang">
+              <div class="lang-top"><span>العربية</span><span>اللغة الرسمية</span></div>
+              <div class="bar"><span style="width:100%"></span></div>
+            </div>
+            <div class="lang" style="margin-bottom:0">
+              <div class="lang-top"><span>الإنجليزية</span><span>75%</span></div>
+              <div class="bar"><span style="width:75%"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div class="panel-title"><i class="fa-solid fa-users"></i> المهارات الشخصية</div>
+          </div>
+          <div class="panel-body">
+            <ul class="personal-list">
+              <li>التعلم الذاتي والطموح</li>
+              <li>العمل بروح الفريق الواحد</li>
+              <li>التصميم الاحترافي والإبداع</li>
+              <li>فن استغلال المساحات الصغيرة</li>
+            </ul>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+  </div>
+</div>
+</body>
+</html>
